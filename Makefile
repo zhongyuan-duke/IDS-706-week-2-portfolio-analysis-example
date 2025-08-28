@@ -5,7 +5,7 @@ format:
 	black *.py
 	
 lint:
-	flake8 --ignore=E501,N8,C portfolio.py portfolio_oop.py
+	flake8 --ignore=E501,N8,C *.py
 
 test:
 	pytest

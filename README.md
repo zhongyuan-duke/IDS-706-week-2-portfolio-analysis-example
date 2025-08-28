@@ -1,3 +1,4 @@
+[![CI](https://github.com/zhongyuan-duke/IDS-706-week-2-portfolio-analysis-example/actions/workflows/main.yml/badge.svg)](https://github.com/zhongyuan-duke/IDS-706-week-2-portfolio-analysis-example/actions/workflows/main.yml)
 ### This project will:
 
 - Use a dev container, Makefile, and GitHub Actions
