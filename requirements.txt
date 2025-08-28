@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+yfinance
+pytest
+flake8
+seaborn
+jupyter
+scipy
