@@ -40,28 +40,9 @@ scipy
 A **development container** is a running container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Dev Containers](https://aka.ms/vscode-remote/containers)**.
 
 #### VS Code Dev Containers
-Option 1: Use the Dev Containers extension in VS Code to create a dev container. Open a sample in a container by pressing shift+command+P, then select `Dev Containers: Add Development Container Configuration Files...`. Choose the Python 3.11 template, and it will create the necessary files for you.
+Option 1: Use the Dev Containers extension in VS Code to create a dev container. Open a sample in a container by pressing shift+command+P, then select `Dev Containers: Add Development Container Configuration Files...`. Choose the Python template, and it will create the necessary files for you.
 
-Option 2: Manually create the dev container files. In the project root, create a .devcontainer directory and inside it, 
-create a .devcontainer/devcontainer.json file with:
-```json
-{
-  "name": "portfolio-risk-analysis",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install -r requirements.txt",
-  // "postCreateCommand": "make install",
-  "settings": {
-    "python.pythonPath": "/usr/local/bin/python"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python"
-      ]
-    }
-  }
-}
-```
+Option 2: Manually create the dev container files. In the project root, create a .devcontainer directory and inside it, create a .devcontainer/devcontainer.json file.
 
 #### GitHub Codespaces
 Follow these steps:
@@ -119,26 +100,8 @@ Click on "New workflow".
 Select "Set up a workflow yourself".
 Replace the content with the following YAML configuration.
 
-
 Option 2: in the project root, create a .github/workflows directory and inside it,
-create a .github/workflows/ci.yml file with:
-```yaml
-name: CI                
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest                  
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.11'
-    - name: Install dependencies
-      run: pip install -r requirements.txt
-    - name: Run tests
-      run: make test
-``` 
+create a .github/workflows/main.yml file 
 
 ### Object-Oriented Programming (OOP) vs Procedural Example
 
